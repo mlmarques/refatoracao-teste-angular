@@ -4,6 +4,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { CriarUsuarioComponent } from './criar-usuario.component';
+import { UsuarioService } from '../usuario.service';
 
 describe('CriarUsuarioComponent', () => {
   let httpClient: HttpClient;
@@ -22,7 +23,8 @@ describe('CriarUsuarioComponent', () => {
   function setup() {
     const fixture = TestBed.createComponent(CriarUsuarioComponent);
     const app = fixture.componentInstance;
-    return { fixture, app };
+    const userService = fixture.debugElement.injector.get(UsuarioService);
+    return { fixture, app, userService };
   }
 
 
@@ -34,6 +36,38 @@ describe('CriarUsuarioComponent', () => {
   it('should have a user', () => {
     const app = setup();
     expect(app.app.usuario).toBeTruthy()
+  })
+  
+  it('should display the same name as user name', () => {
+    const app = setup();
+    app.fixture.detectChanges();
+    const compile = app.fixture.debugElement.nativeElement;
+    const userName = compile.querySelector('name');
+    expect(app.app.usuario.name).toEqual(userName)
+  })
+
+  it('should display the same email as user email', () => {
+    const app = setup();
+    app.fixture.detectChanges();
+    const compile = app.fixture.debugElement.nativeElement;
+    const userEmail = compile.querySelector('email');
+    expect(app.app.usuario.email).toEqual(userEmail)
+  })
+
+  it('should display the same cpf as user cpf', () => {
+    const app = setup();
+    app.fixture.detectChanges();
+    const compile = app.fixture.debugElement.nativeElement;
+    const userCpf = compile.querySelector('cpf');
+    expect(app.app.usuario.cpf).toEqual(userCpf)
+  })
+
+  it('should display the same phone as user phone', () => {
+    const app = setup();
+    app.fixture.detectChanges();
+    const compile = app.fixture.debugElement.nativeElement;
+    const userPhone = compile.querySelector('phone');
+    expect(app.app.usuario.phone).toEqual(userPhone)
   })
 
   // it(`should have as title 'projeto-teste-angular'`, () => {

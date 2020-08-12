@@ -13,9 +13,9 @@ export class CriarUsuarioComponent implements OnInit {
 
   usuario: Usuario = {
     cpf: null,
-    name: '',
+    name: null,
     phone: null,
-    email: '',
+    email: null,
   }
 
   constructor(private route: ActivatedRoute, private router: Router, private usuarioService: UsuarioService) { }
