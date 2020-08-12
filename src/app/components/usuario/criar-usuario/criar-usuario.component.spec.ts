@@ -1,5 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { RouterTestingModule, setupTestingRouter } from '@angular/router/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
@@ -19,11 +19,22 @@ describe('CriarUsuarioComponent', () => {
     httpTestingController = TestBed.get(HttpTestingController);
   }));
 
-  it('should create the app', () => {
+  function setup() {
     const fixture = TestBed.createComponent(CriarUsuarioComponent);
     const app = fixture.componentInstance;
+    return { fixture, app };
+  }
+
+
+  it('should create the app', () => {
+    const app = setup();
     expect(app).toBeTruthy();
   });
+
+  it('should have a user', () => {
+    const app = setup();
+    expect(app.app.usuario).toBeTruthy()
+  })
 
   // it(`should have as title 'projeto-teste-angular'`, () => {
   //   const fixture = TestBed.createComponent(AppComponent);
