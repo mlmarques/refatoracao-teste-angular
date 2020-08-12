@@ -1,0 +1,116 @@
+$label-cadastro: #c4c4c4;
+$input-cadastro: #333333;
+$input-borda: #333333;
+$input-foco: #333333;
+$input-invalido: #eb4a46;
+
+.formulario-container{
+
+    & .titulo-formulario{
+        font-size: 32px;
+        color: $input-foco;
+        font-weight: bold;
+        padding-top: 12px;
+    }
+
+    & .linha-formulario{
+        display: block;
+        float: left;
+        box-sizing: border-box;
+        margin-top: 18px;
+        width: 100%;
+
+        &.botao{
+            margin-top: 52px;
+        }
+    }
+
+    & .label-cancelar{
+        display: inline-block;
+        margin-top: 12px;
+        font-size: 14px;
+        font-weight: bold;
+        color: $input-foco;
+        cursor: pointer;
+
+        &:hover{
+            border-bottom: 2px solid $input-foco;
+        }
+    }
+}
+
+.label-cadastro{
+    box-sizing: border-box;
+    display:inline-block;
+    width: 100%;
+    font-size: 16px;
+    color: $label-cadastro; 
+}
+
+.input-cadastro{
+    box-sizing: border-box;
+    display:inline-block;
+    width: 100%;
+    padding: 8px 0;
+    color: $input-cadastro;
+    font-size: 20px;
+    border-bottom: 2px solid $input-borda;
+
+    &:focus{
+        color: $input-foco;
+        border-bottom: 2px solid $input-foco;
+    }
+
+    &.invalido{
+        color: $input-invalido;
+        border-bottom: 2px solid $input-invalido;
+    }
+}
+
+.botao-cadastrar{
+    box-sizing: border-box;
+    width: 100%;
+    height: 62px;
+    border-radius: 32px;
+    color: #FFFFFF;
+    background-color: #00c8b3;
+    font-size: 26px;
+
+    &:hover{
+        opacity: 70%;
+    }
+
+    &:disabled{
+        color: #dddcdc;
+        background-color: #f6f6f6;
+    }
+}
+
+
+@media only screen and (min-width: 768px){
+    .formulario-container{
+        width: 40%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .formulario-container{
+        width: 60%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .formulario-container{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 321px){
+    .formulario-container{
+        width: 90%;
+        margin: auto;
+    }
+}
