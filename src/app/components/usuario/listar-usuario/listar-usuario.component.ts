@@ -11,7 +11,7 @@ import { UsuarioService } from './../usuario.service'
 })
 export class ListarUsuarioComponent implements OnInit {
 
-  usuarios: Usuario[];
+  usuarios: Usuario[] = [];
 
   constructor(private router: Router, private usuarioService: UsuarioService) { }
 
