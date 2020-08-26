@@ -1,27 +1,14 @@
 # ProjetoTesteAngular
+Esse projeto foi gerado atulizando [Angular CLI](https://github.com/angular/angular-cli) versão 10.0.2.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
+## Após clonar o projeto
+Na pasta do projeto clonado, execute `npm install` para baixar e instalar todas as dependências necessárias. 
 
-## Development server
+## Rodar o projeto localmente
+Execute `ng serve` para iniciar a aplicação, por padrão poderá ser acesso no navegador através do caminho `http://localhost:4200/`. Caso queira abrir o navegador imadiatamente após rodar a aplicação, execute `ng serve -o`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Rodar testes
+Execute `ng test` para rodar os testes unitários via [Karma](https://karma-runner.github.io).
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Test coverage
+Na pasta do projeto, há a pasta `coverage`, abra o arquivo `index.html` no navegador para ter acesso a uma página com o coverage summary do projeto. 
