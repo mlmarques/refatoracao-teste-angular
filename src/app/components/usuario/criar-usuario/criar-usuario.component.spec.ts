@@ -69,17 +69,4 @@ describe('CriarUsuarioComponent', () => {
     const userPhone = compile.querySelector('phone');
     expect(app.app.usuario.phone).toEqual(userPhone)
   })
-
-  // it(`should have as title 'projeto-teste-angular'`, () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   const app = fixture.componentInstance;
-  //   expect(app.title).toEqual('projeto-teste-angular');
-  // });
-
-  // it('should render title', () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.nativeElement;
-  //   expect(compiled.querySelector('.content span').textContent).toContain('projeto-teste-angular app is running!');
-  // });
 });
